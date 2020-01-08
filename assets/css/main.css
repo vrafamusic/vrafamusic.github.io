@@ -1655,9 +1655,23 @@ input, select, textarea {
 			#header .content p br {
 				display: none;
 			}
+            #header nav ul {
+					min-width: 10rem;
+					max-width: 100%;
+				}
 
-		}
+			#header nav ul li:first-child {
+					border-top: 0;
+				}
 
+			#header nav ul li a {
+					height: 2rem;
+					line-height: 2rem;
+					min-width: 0;
+					width: 80%;
+                    font-size:x-small;
+				}
+		}		
 		@media screen and (max-width: 736px) {
 
 			#header > * {
@@ -1686,7 +1700,34 @@ input, select, textarea {
 			#header .content p {
 				line-height: 1.875;
 			}
+				#header nav ul {
+					-moz-flex-direction: column;
+					-webkit-flex-direction: column;
+					-ms-flex-direction: column;
+					flex-direction: column;
+					min-width: 10rem;
+					max-width: 100%;
+				}
 
+					#header nav ul li {
+						border-left: 0;
+						border-top: solid 1px #ffffff;
+					}
+
+						#header nav ul li:first-child {
+							border-top: 0;
+						}
+
+						#header nav ul li a {
+							height: 3rem;
+							line-height: 3rem;
+							min-width: 0;
+							width: 100%;
+						}
+
+				#header nav.use-middle:after {
+					display: none;
+				}
 		}
 
 		@media screen and (max-width: 480px) {
